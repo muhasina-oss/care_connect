@@ -1,0 +1,142 @@
+#===DOCTORS====#
+#api call for list doctors
+###
+GET http://127.0.0.1:8000/doctors/
+Accept: application/json
+
+#api call for adding a adoctor
+###
+POST http://127.0.0.1:8000/doctors/
+Content-Type: application/json
+
+{
+  "name":"Janani",
+  "specialization":"psychiatry",
+  "fee":3000,
+  "qualification":"mbbs",
+  "email":"j@gmail.com"
+}
+
+#api call for fetching doctor details
+###
+GET http://127.0.0.1:8000/doctors/2/
+Accept: application/json
+
+#api call for update a doctor
+###
+PUT http://127.0.0.1:8000/doctors/3/
+Content-Type: application/json
+
+{
+  "name":"Navami",
+  "specialization":"psychiatry",
+  "fee":5000,
+  "qualification":"mbbs",
+  "email":"navami@gmail.com"
+}
+
+#api call for dlete a doctor
+###
+DELETE http://127.0.0.1:8000/doctors/4/
+Accept: application/json
+
+#v2
+#api call for list doctors
+###
+GET http://127.0.0.1:8000/v2/doctors/
+Accept: application/json
+Authorization: Basic superuser:superuser
+#api call for adding a adoctor
+###
+POST http://127.0.0.1:8000/v2/doctors/
+Content-Type: application/json
+
+{
+  "name":"Sukumar",
+  "specialization":"psychiatry",
+  "fee":300,
+  "qualification":"mbbs",
+  "email":"sukumar@gmail.com"
+}
+
+#api call for fetching doctor details
+###
+GET http://127.0.0.1:8000/v2/doctors/2/
+Accept: application/json
+
+#api call for update a doctor data
+###
+PUT http://127.0.0.1:8000/v2/doctors/6/
+Content-Type: application/json
+
+{
+  "name":"Sukumar",
+  "specialization":"psychiatry",
+  "fee":400,
+  "qualification":"mbbs",
+  "email":"sukumar@gmail.com"
+}
+#api call for delete a doctor
+###
+DELETE http://127.0.0.1:8000/v2/doctors/2/
+Accept: application/json
+
+#user==
+#api call for regiter admin
+###
+POST http://127.0.0.1:8000/v2/admin-register/
+Content-Type: application/json
+
+{
+  "username":"superuser",
+  "email":"superuser@gmail.com",
+  "password":"superuser"
+}
+
+#appointments=======
+#api call for list all appointments
+###
+GET http://127.0.0.1:8000/appointments/
+Accept: application/json
+
+#api call for booking an appoinment
+###
+POST http://127.0.0.1:8000/appointments/
+Content-Type: application/json
+
+{
+  "patient_name":"saina",
+  "phone":"9907878907",
+  "doctor":1,
+  "appointment_date":"2026-10-2",
+  "problem":"fever"
+}
+
+# api call for register a user
+###
+POST http://127.0.0.1:8000/v2/booking/signup/
+Content-Type: application/json
+
+{
+  "username":"user",
+  "email":"user@gmail.com",
+  "password":"user"
+}
+
+#api call for list all apointmens
+###
+GET http://127.0.0.1:8000/v2/booking/appointments/
+Accept: application/json
+
+#api call for create an appointment
+###
+POST http://127.0.0.1:8000/v2/booking/appointments/
+Content-Type: application/json
+
+{
+  "patient_name":"manju",
+  "phone":"9907878907",
+  "doctor":3,
+  "appointment_date":"2026-10-24",
+  "problem":"skin allergy"
+}
